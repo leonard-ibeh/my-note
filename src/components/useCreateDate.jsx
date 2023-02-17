@@ -2,6 +2,7 @@ const useCreateDate = () => {
   const dateObj = new Date();
   let month = dateObj.getMonth();
   let monthName;
+  // eslint - disable - next - line;
   switch (month) {
     case 0:
       monthName = "Jan";
@@ -11,31 +12,31 @@ const useCreateDate = () => {
       break;
     case 2:
       monthName = "Mar";
-      Break;
+      break;
     case 3:
       monthName = "Apr";
-      Break;
+      break;
     case 4:
       monthName = "May";
-      Break;
+      break;
     case 5:
       monthName = "Jun";
-      Break;
+      break;
     case 6:
       monthName = "July";
-      Break;
+      break;
     case 7:
       monthName = "Aug";
-      Break;
+      break;
     case 8:
       monthName = "Sep";
-      Break;
+      break;
     case 9:
       monthName = "Oct";
-      Break;
+      break;
     case 10:
       monthName = "Nov";
-      Break;
+      break;
     case 11:
       monthName = "Dec";
   }

@@ -12,10 +12,10 @@ const Note = ({ noteData }) => {
 
   const handleSearch = () => {
     setFilteredNotes(
-      noteData.filter((note) => {
+      noteData.reduce((note) => {
         if (note.title.toLowerCase().match(text.toLowerCase())) {
-          return note;
         }
+        return note;
       })
     );
   };
