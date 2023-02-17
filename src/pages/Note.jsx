@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { CiSearch } from "react-icons/ci";
 import { MdClose } from "react-icons/md";
-
+import { CiSearch } from "react-icons/ci";
 import { BsPlusLg } from "react-icons/bs";
 import NoteItem from "../components/NoteItem";
+import React, { useEffect, useState } from "react";
 
 const Note = ({ noteData }) => {
   const [showSearch, setShowSearch] = useState(false);
@@ -20,8 +19,7 @@ const Note = ({ noteData }) => {
       })
     );
   };
-
-  useEffect(handleSearch, [text]);
+  useEffect(handleSearch, [text, noteData]);
 
   return (
     <section>

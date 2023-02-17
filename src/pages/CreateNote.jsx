@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { v4 as uuid } from "uuid";
+import { useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { Link, useNavigate } from "react-router-dom";
-import { v4 as uuid } from "uuid";
 import useCreateDate from "../components/useCreateDate";
 
 const CreateNote = ({ setNoteData }) => {

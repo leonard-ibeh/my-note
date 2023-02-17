@@ -1,19 +1,17 @@
 import React, { useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
-import { Link, useNavigate, useParams } from "react-router-dom";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import useCreateDate from "../components/useCreateDate";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 const EditNote = ({ noteData, setNoteData }) => {
-  const { id } = useParams();
-
-  const note = noteData.find((item) => item.id === id);
-
-  const [title, setTitle] = useState(note.title);
-  const [details, setDetails] = useState(note.details);
-
   const date = useCreateDate();
   const navigate = useNavigate();
+
+  const { id } = useParams();
+  const note = noteData.find((item) => item.id === id);
+  const [title, setTitle] = useState(note.title);
+  const [details, setDetails] = useState(note.details);
 
   const handleForm = (e) => {
     e.preventDefault();
@@ -28,7 +26,7 @@ const EditNote = ({ noteData, setNoteData }) => {
       setNoteData(newNotes);
       navigate("/");
     } else {
-      alert("imput note");
+      alert("input note");
     }
   };
 
@@ -37,7 +35,6 @@ const EditNote = ({ noteData, setNoteData }) => {
       const newNotes = noteData.filter((item) => item.id !== id);
       setNoteData(newNotes);
     }
-
     navigate("/");
   };
 

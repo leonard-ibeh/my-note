@@ -9,7 +9,6 @@ function App() {
   const [noteData, setNoteData] = useState(
     JSON.parse(localStorage.getItem("notes")) || []
   );
-  // console.log(noteData);
 
   useEffect(() => {
     localStorage.setItem("notes", JSON.stringify(noteData));
